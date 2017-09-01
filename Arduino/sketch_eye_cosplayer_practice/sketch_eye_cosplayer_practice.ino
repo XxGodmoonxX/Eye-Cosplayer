@@ -1,10 +1,11 @@
-#include <Braccio.h>
+#include <eye-cosplayer.h>
+//#include <Braccio.h>
 #include <Servo.h>
 Servo base;
 Servo shoulder;
 Servo elbow;
-Servo wrist_rot;
 Servo wrist_ver;
+Servo wrist_rot;
 Servo gripper;
 
 int wrist_rotation = 40;
@@ -21,8 +22,8 @@ void setup() {
   //gripper (M6): 10 degrees 10~73
   Braccio.begin();
   
-  Braccio.ServoMovement(1000, 0, 110, 5, 2, wrist_rotation, grip);
-  Braccio.ServoMovement(1000, 30, 110, 5, 2, wrist_rotation, grip);
+//  Braccio.ServoMovement(1000, 0, 110, 5, 2, wrist_rotation, grip);
+//  Braccio.ServoMovement(1000, 30, 110, 5, 2, wrist_rotation, grip);
 }
 void loop() {
   /*
