@@ -8,8 +8,8 @@ Servo wrist_ver;
 Servo wrist_rot;
 Servo gripper;
 
-int wrist_rotation = 40;
-int grip = 73;
+int wrist_rotation = 0;
+int grip = 10;
 
 void setup() {
   //Initialization functions and set up the initial position for Braccio
@@ -39,11 +39,11 @@ void loop() {
   //  delay(1000);
   //(step delay  M1 , M2 , M3 , M4 , M5 , M6);
   
-  Braccio.ServoMovement(1000, 0, 110, 5, 2, wrist_rotation, grip);
-  Braccio.ServoMovement(1000, 7, 110, 5, 2, wrist_rotation, grip);
-  Braccio.ServoMovement(1000, 0, 110, 5, 2, wrist_rotation, grip);
-  Braccio.ServoMovement(1000, 7, 110, 5, 2, wrist_rotation, grip);
-  Braccio.ServoMovement(1000, 0, 110, 5, 2, wrist_rotation, grip);
-  Braccio.ServoMovement(1000, 7, 110, 5, 2, wrist_rotation, grip);
+  Braccio.ServoMovement(3000, 0, 45, 20, 130, wrist_rotation, grip);
+//  Braccio.ServoMovement(1000, 7, 110, 5, 2, wrist_rotation, grip);
+//  Braccio.ServoMovement(1000, 0, 110, 5, 2, wrist_rotation, grip);
+//  Braccio.ServoMovement(1000, 7, 110, 5, 2, wrist_rotation, grip);
+//  Braccio.ServoMovement(1000, 0, 110, 5, 2, wrist_rotation, grip);
+//  Braccio.ServoMovement(1000, 7, 110, 5, 2, wrist_rotation, grip);
 
 }
