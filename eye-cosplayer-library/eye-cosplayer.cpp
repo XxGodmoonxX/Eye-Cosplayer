@@ -29,7 +29,7 @@ extern Servo gripper;
 int initial_base = 0;
 int initial_shoulder = 100;
 int initial_elbow = 0;
-int initial_wrist_ver = 90; //90
+int initial_wrist_ver = 90;
 int initial_wrist_rot = 0;
 int initial_gripper = 10;
 
@@ -122,7 +122,7 @@ void _Braccio::_softwarePWM(int high_time, int low_time){
   digitalWrite(SOFT_START_CONTROL_PIN,HIGH);
   delayMicroseconds(high_time);
   digitalWrite(SOFT_START_CONTROL_PIN,LOW);
-  delayMicroseconds(low_time); 
+  delayMicroseconds(low_time);
 }
 
 /*
@@ -131,10 +131,10 @@ void _Braccio::_softwarePWM(int high_time, int low_time){
 * The SOFT_START_CONTROL_PIN is used as a software PWM
 * @param soft_start_level: the minimum value is -70, default value is 0 (SOFT_START_DEFAULT)
 */
-void _Braccio::_softStart(int soft_start_level){      
+void _Braccio::_softStart(int soft_start_level){
   long int tmp=millis();
   while(millis()-tmp < LOW_LIMIT_TIMEOUT)
-    _softwarePWM(80+soft_start_level, 450 - soft_start_level);   //the sum should be 530usec  
+    _softwarePWM(80+soft_start_level, 450 - soft_start_level);   //the sum should be 530usec
 
   while(millis()-tmp < HIGH_LIMIT_TIMEOUT)
     _softwarePWM(75 + soft_start_level, 430 - soft_start_level); //the sum should be 505usec
@@ -144,7 +144,7 @@ void _Braccio::_softStart(int soft_start_level){
 
 /**
  * This functions allow you to control all the servo motors
- * 
+ *
  * @param stepDelay The delay between each servo movement
  * @param vBase next base servo motor degree
  * @param vShoulder next shoulder servo motor degree
@@ -174,11 +174,11 @@ int _Braccio::ServoMovement(int stepDelay, int vBase, int vShoulder, int vElbow,
   int exit = 1;
 
   //Until the all motors are in the desired position
-  while (exit) 
-  {     
-    //For each servo motor if next degree is not the same of the previuos than do the movement    
-    if (vBase != step_base) 
-    {     
+  while (exit)
+  {
+    //For each servo motor if next degree is not the same of the previuos than do the movement
+    if (vBase != step_base)
+    {
       base.write(step_base);
       //One step ahead
       if (vBase > step_base) {
@@ -190,7 +190,7 @@ int _Braccio::ServoMovement(int stepDelay, int vBase, int vShoulder, int vElbow,
       }
     }
 
-    if (vShoulder != step_shoulder)  
+    if (vShoulder != step_shoulder)
     {
       shoulder.write(step_shoulder);
       //One step ahead
@@ -204,7 +204,7 @@ int _Braccio::ServoMovement(int stepDelay, int vBase, int vShoulder, int vElbow,
 
     }
 
-    if (vElbow != step_elbow)  
+    if (vElbow != step_elbow)
     {
       elbow.write(step_elbow);
       //One step ahead
@@ -218,12 +218,12 @@ int _Braccio::ServoMovement(int stepDelay, int vBase, int vShoulder, int vElbow,
 
     }
 
-    if (vWrist_ver != step_wrist_rot) 
+    if (vWrist_ver != step_wrist_rot)
     {
       wrist_rot.write(step_wrist_rot);
       //One step ahead
       if (vWrist_ver > step_wrist_rot) {
-        step_wrist_rot++;       
+        step_wrist_rot++;
       }
       //One step beyond
       if (vWrist_ver < step_wrist_rot) {
@@ -256,11 +256,11 @@ int _Braccio::ServoMovement(int stepDelay, int vBase, int vShoulder, int vElbow,
         step_gripper--;
       }
     }
-    
+
     //delay between each movement
     delay(stepDelay);
-    
-    //It checks if all the servo motors are in the desired position 
+
+    //It checks if all the servo motors are in the desired position
     if ((vBase == step_base) && (vShoulder == step_shoulder)
         && (vElbow == step_elbow) && (vWrist_ver == step_wrist_rot)
         && (vWrist_rot == step_wrist_ver) && (vgripper == step_gripper)) {

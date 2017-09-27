@@ -41,21 +41,21 @@ class _Braccio {
 
 public:
   _Braccio();
-    
+
   /**
   * Braccio initializations and set intial position
   * Modifing this function you can set up the initial position of all the
-  * servo motors of Braccio 
+  * servo motors of Braccio
   *@param soft_start_level: the minimum value is -70, default value is 0 (SOFT_START_DEFAULT)
   * You should set begin(SOFT_START_DISABLED) if you are using the Arm Robot shield V1.6
   */
-  unsigned int begin(int soft_start_level=SOFT_START_DEFAULT); 
+  unsigned int begin(int soft_start_level=SOFT_START_DEFAULT);
 
   /**
    * This function allow the user to control all the servo motors in the Braccio
    */
-  int ServoMovement(int delay, int Vbase,int Vshoulder, int Velbow, int Vwrist_ver, int Vwrist_rot, int Vgripper); 
-  
+  int ServoMovement(int delay, int Vbase,int Vshoulder, int Velbow, int Vwrist_ver, int Vwrist_rot, int Vgripper);
+
 
 private:
   /*
@@ -65,7 +65,7 @@ private:
   * @param soft_start_level: the minimum value is -70, , default value is 0 (SOFT_START_DEFAULT)
   */
   void _softStart(int soft_start_level);
-  
+
   /*
   * Software implementation of the PWM for the SOFT_START_CONTROL_PIN,HIGH
   * @param high_time: the time in the logic level high
