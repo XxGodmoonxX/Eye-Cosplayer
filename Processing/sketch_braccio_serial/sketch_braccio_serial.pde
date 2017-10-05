@@ -19,12 +19,12 @@ void setup() {
   cp5 = new ControlP5(this);
   
   button = cp5.addButton("enterA")
-    .setLabel("Enter A")
+    .setLabel("Straight")
     .setPosition(250, 150)
     .setSize(100, 50);
     
   button = cp5.addButton("enterB")
-    .setLabel("Enter B")
+    .setLabel("Draw Eye")
     .setPosition(250, 250)
     .setSize(100, 50);
 }
