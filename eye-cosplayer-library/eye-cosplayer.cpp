@@ -26,11 +26,20 @@ extern Servo wrist_rot;
 extern Servo wrist_ver;
 extern Servo gripper;
 
+//本来の設定はこれがいいかな
+// int initial_base = 0;
+// int initial_shoulder = 100;
+// int initial_elbow = 0;
+// int initial_wrist_ver = 180;
+// int initial_wrist_rot = 90;
+// int initial_gripper = 10;
+
+//練習中は直立してほしい
 int initial_base = 0;
-int initial_shoulder = 100;
-int initial_elbow = 0;
-int initial_wrist_ver = 90;
-int initial_wrist_rot = 0;
+int initial_shoulder = 90;
+int initial_elbow = 90;
+int initial_wrist_ver = 180;
+int initial_wrist_rot = 90;
 int initial_gripper = 10;
 
 extern int step_base = initial_base;
