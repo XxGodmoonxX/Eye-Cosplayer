@@ -32,6 +32,15 @@ void setup() {
 void draw() {
 }
 
+void keyPressed() {
+  if (key == 's') {
+    enterA();
+  }
+  if (key == 'd') {
+    enterB();
+  }
+}
+
 void enterA() {
   myPort.write(1);
   println(myPort.read());
