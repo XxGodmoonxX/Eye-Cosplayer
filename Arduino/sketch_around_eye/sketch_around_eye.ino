@@ -59,6 +59,9 @@ void loop() {
       delay(delay_num);
       
       //ここから眼を描く
+      
+      //上の辺
+      
       s = 30;
       e = 20;
       Braccio.ServoMovement(3000, 18,s,e,180-s-5, wrist_rotation, grip);
@@ -79,7 +82,7 @@ void loop() {
       e = 4;
       Braccio.ServoMovement(3000, 15,s,e,180-s, wrist_rotation, grip);
       delay(delay_num);
-      
+      //反対側手前の点
       s = 58;
       e = 0;
       Braccio.ServoMovement(3000, 18,s,e,180-s, wrist_rotation, grip);
@@ -88,6 +91,8 @@ void loop() {
       e = 0;
       Braccio.ServoMovement(3000, 18,s,e,180-s, wrist_rotation, grip);
       delay(delay_num);
+      
+      //下の辺
       
       s = 50;
       e = 4;
@@ -109,6 +114,7 @@ void loop() {
       e = 25;
       Braccio.ServoMovement(3000, 12,s,e,180-s-10, wrist_rotation, grip);
       delay(delay_num);
+      
       //ここまで
       
       s = 90;

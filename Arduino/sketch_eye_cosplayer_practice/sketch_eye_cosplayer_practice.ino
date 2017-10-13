@@ -55,9 +55,14 @@ void loop() {
     }
     if (val == 2) {  
       //最初腕を振り上げる
+      /*
       Braccio.ServoMovement(3000, 0, 90, 30, 90, wrist_rotation, grip);
       delay(delay_num);
+      */
+      Braccio.ServoMovement(3000, 0, 90, 30, 90, 90, grip);
+      delay(delay_num);
       
+      /*
       //ここから眼を描く
       s = 30;
       e = 20;
@@ -110,6 +115,20 @@ void loop() {
       Braccio.ServoMovement(3000, 12,s,e,180-s-10, wrist_rotation, grip);
       delay(delay_num);
       //ここまで
+      */
+      
+      Braccio.ServoMovement(3000, 0, 90, 30, 90, 135, grip);
+      delay(delay_num);
+      s = 30;
+      e = 25;
+      Braccio.ServoMovement(3000, 12,s,e,180-s-10,135, grip);
+      delay(delay_num);
+      Braccio.ServoMovement(3000, 0, 90, 30, 90, 90, grip);
+      delay(delay_num);
+      s = 30;
+      e = 25;
+      Braccio.ServoMovement(3000, 12,s,e,180-s-10,90, grip);
+      delay(delay_num);
       
       s = 90;
       Braccio.ServoMovement(3000, 12,s,e,180-s-10, wrist_rotation, grip);
