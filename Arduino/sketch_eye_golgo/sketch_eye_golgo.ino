@@ -60,170 +60,74 @@ void loop() {
       
       //ここから眼を描く
       
-      //ゴルゴの眉の上部分
-      
-//      s = 57;
-//      e = 2;
-      Braccio.ServoMovement(3000, 16,s,e,180-s, wrist_rotation, grip);
-      delay(delay_num);
-//      s = 48;
-//      e = 9;
-      Braccio.ServoMovement(3000, 10,s,e,180-s, wrist_rotation, grip);
-      delay(delay_num);
-//      s = 42;
-//      e = 15;
-      Braccio.ServoMovement(3000, 5,s,e,180-s, wrist_rotation, grip);
-      delay(delay_num);
-//      s = 30;
-//      e = 20;
-      Braccio.ServoMovement(3000, 14,s,e,180-s-5, wrist_rotation, grip);
-      delay(delay_num);
-      
-      //ゴルゴの眉の下部分
-      
-//      s = 30;
-//      e = 20;
-      Braccio.ServoMovement(3000, 14,s,e,180-s-5, wrist_rotation, grip);
-      delay(delay_num);
-//      s = 42;
-//      e = 15;
-      Braccio.ServoMovement(3000, 7,s,e,180-s, wrist_rotation, grip);
-      delay(delay_num);
-//      s = 44;
-//      e = 15;
-      Braccio.ServoMovement(3000, 9,s,e,180-s, wrist_rotation, grip);
-      delay(delay_num);
-//      s = 49;
-//      e = 7;
-      Braccio.ServoMovement(3000, 18,s,e,180-s, wrist_rotation, grip);
-      delay(delay_num);
-      
-      //一旦ペンを上げる
-      s = 90;
-      Braccio.ServoMovement(3000, 18,s,e,180-s, wrist_rotation, grip);
-      delay(delay_num);
-      
-      //ゴルゴの眉左下のシワ的な部分
-      
-//      s = 53;
-//      e = 4;
-      Braccio.ServoMovement(3000, 17,s,e,180-s, wrist_rotation, grip);
-      delay(delay_num);
-//      s = 61;
-//      e = 0;
-      s = 30;
-      e = 20;
-      Braccio.ServoMovement(3000, 22,s,e,180-s, wrist_rotation, grip);
-      delay(delay_num);
-//      s = 55;
-//      e = 5;
-      Braccio.ServoMovement(3000, 25,s,e,180-s, wrist_rotation, grip);
-      delay(delay_num);
-//      s = 50;
-//      e = 10;
-      Braccio.ServoMovement(3000, 28,s,e,180-s, wrist_rotation, grip);
-      delay(delay_num);
-      //一旦ペンを上げる
-      s = 90;
-      Braccio.ServoMovement(3000, 28,s,e,180-s-5, wrist_rotation, grip);
-      delay(delay_num);
-      
-      //ゴルゴの眼の部分
+      //眉の上部分
       /*
-      //上の辺
-      s = 31;
-      e = 19;
-      Braccio.ServoMovement(3000, 17,s,e,180-s-8, wrist_rotation, grip);
+      //1
+      s = 27;
+      e = 22;
+      Braccio.ServoMovement(3000, 17,s,e,180-s-5, wrist_rotation, grip);
       delay(delay_num);
+      //2
+      s = 38;
+      e = 16;
+      Braccio.ServoMovement(3000, 13,s,e,180-s, wrist_rotation, grip);
+      delay(delay_num);
+      //3
+      s = 43;
+      e = 12;
+      Braccio.ServoMovement(3000, 8,s,e,180-s, wrist_rotation, grip);
+      delay(delay_num);
+      //4
       s = 51;
       e = 6;
-      Braccio.ServoMovement(3000, 17,s,e,180-s, wrist_rotation, grip);
+      Braccio.ServoMovement(3000, 15,s,e,180-s, wrist_rotation, grip);
       delay(delay_num);
-      //角度を変える（ペンを引くために）
-      s = 53;
-      e = 5;
-      Braccio.ServoMovement(3000, 19,s,e,180-s, wrist_rotation-10, grip);
+      //5
+      s = 56;
+      e = 3;
+      Braccio.ServoMovement(3000, 15,s,e,180-s, wrist_rotation, grip);
       delay(delay_num);
-      //下の辺
-      s = 53;
-      e = 5;
-      Braccio.ServoMovement(3000, 22,s,e,180-s, wrist_rotation-10, grip);
+      
+      //眉の下部分
+      /*
+      //
+      s = 45;
+      e = 13;
+      Braccio.ServoMovement(3000, 13,s,e,180-s, wrist_rotation, grip);
       delay(delay_num);
-      //角度戻す
-      s = 51;
-      e = 6;
-      Braccio.ServoMovement(3000, 22,s,e,180-s, wrist_rotation, grip);
-      delay(delay_num);
+      //
       s = 40;
       e = 16;
       Braccio.ServoMovement(3000, 17,s,e,180-s, wrist_rotation, grip);
       delay(delay_num);
-      //下と上結ぶ
-      s = 33;
+      //
+      s = 36;
       e = 18;
-      Braccio.ServoMovement(3000, 13,s,e,180-s, wrist_rotation, grip);
-      delay(delay_num);
-      //一旦ペンを上げる
-      s = 90;
-      Braccio.ServoMovement(3000, 13,s,e,180-s, wrist_rotation, grip);
-      delay(delay_num);
-      
-      //ゴルゴの眼の中の部分
-      
-      //頂点
-      s = 42;
-      e = 15;
-      Braccio.ServoMovement(3000, 15,s,e,180-s, wrist_rotation, grip);
-      delay(delay_num);
-      s = 42;
-      e = 15;
-      Braccio.ServoMovement(3000, 20,s,e,180-s, wrist_rotation, grip);
+      Braccio.ServoMovement(3000, 21,s,e,180-s, wrist_rotation, grip);
       delay(delay_num);
       */
+      //顔の皺部分
       
-      
-      
-//      s = 58;
-//      e = 0;
-//      Braccio.ServoMovement(3000, 16,s,e,180-s, wrist_rotation, grip);
-//      delay(delay_num);
-      
-      
-      
-//      s = 53;
-//      e = 0;
-//      Braccio.ServoMovement(3000, 18,s,e,180-s, wrist_rotation, grip);
-//      delay(delay_num);
-//      
-//      s = 50;
-//      e = 4;
-//      Braccio.ServoMovement(3000, 20,s,e,180-s+10, wrist_rotation, grip);
-//      delay(delay_num);
-//      s = 46;
-//      e = 7;
-//      Braccio.ServoMovement(3000, 22,s,e,180-s+10, wrist_rotation, grip);
-//      delay(delay_num);
-//      s = 42;
-//      e = 11;
-//      Braccio.ServoMovement(3000, 24,s,e,180-s+5, wrist_rotation, grip);
-//      delay(delay_num);
-//      s = 35;
-//      e = 20;
-//      Braccio.ServoMovement(3000, 15,s,e,180-s-5, wrist_rotation, grip);
-//      delay(delay_num);
-//      s = 30;
-//      e = 25;
-//      Braccio.ServoMovement(3000, 12,s,e,180-s-10, wrist_rotation, grip);
-//      delay(delay_num);
-      //ここまで
-      
-      s = 90;
-      Braccio.ServoMovement(3000, 12,s,e,180-s-10, wrist_rotation, grip);
+      //
+      s = 30;
+      e = 20;
+      Braccio.ServoMovement(3000, 23,s,e,180-s+10, wrist_rotation, grip);
+      delay(delay_num);
+      //
+      s = 35;
+      e = 16;
+      Braccio.ServoMovement(3000, 25,s,e,180-s+5, wrist_rotation, grip);
+      delay(delay_num);
+      //
+      s = 40;
+      e = 14;
+      Braccio.ServoMovement(3000, 27,s,e,180-s-5, wrist_rotation, grip);
       delay(delay_num);
       
-      
+      //ここまで
       
       //最後腕を振り上げる
+      
       Braccio.ServoMovement(3000, 0, 90, 30, 90, wrist_rotation, grip);
       delay(delay_num);
     }
