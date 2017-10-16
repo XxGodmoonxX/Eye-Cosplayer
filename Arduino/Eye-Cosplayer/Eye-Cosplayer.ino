@@ -57,38 +57,15 @@ void loop() {
     Serial.write(val);
     if (val == 1) {
       //最初の基準合わせるやつ。
-      Braccio.ServoMovement(3000, 0, 90, 90, 90, ayanami, grip);
+      Braccio.ServoMovement(3000, 0, 90, 90, 90, 90, grip);
     }
     if (val == 2) {  
+      //写輪眼カカシ
+      
       //最初腕を振り上げる
       
-      Braccio.ServoMovement(3000, 13, 90, 90, 90, golgo, grip);
+      Braccio.ServoMovement(3000, 13, 90, 90, 90, syaringan_kakashi, grip);
       delay(delay_num);
-      
-      //ここから
-      /*
-      //綾波レイ
-      
-      //朱肉に押す
-      
-      s = 42;
-      e = 5;
-      Braccio.ServoMovement(3000, 13,s,e,133, ayanami, grip);
-      delay(delay_num);
-      e = 90;
-      Braccio.ServoMovement(3000, 13,s,e,133, ayanami, grip);
-      delay(delay_num);
-      
-      //判子を手に押す
-      
-      Braccio.ServoMovement(3000, 90,90,90,90, ayanami, grip);
-      delay(delay_num);
-      s = 42;
-      e = 6;
-      Braccio.ServoMovement(3000, 110,s,e,133, ayanami, grip);
-      delay(delay_num);
-      *//*
-      //写輪眼-1
       
       //朱肉に押す
       
@@ -108,8 +85,27 @@ void loop() {
       e = 5;
       Braccio.ServoMovement(3000, 113,s,e,120, syaringan_kakashi, grip);
       delay(delay_num);
-      *//*
-      //写輪眼-2
+      
+      //ここまで
+      
+      e = 90;
+      Braccio.ServoMovement(3000, 110,s,e,133, syaringan_kakashi, grip);
+      delay(delay_num);
+      
+      //最後腕を振り上げる
+      Braccio.ServoMovement(3000, 13, s, 90, 133, 90, grip);
+      delay(delay_num);
+      
+    }
+    if (val == 3) {
+      //写輪眼サスケ
+      
+      //最初腕を振り上げる
+      
+      Braccio.ServoMovement(3000, 13, 90, 90, 90, syaringan_sasuke, grip);
+      delay(delay_num);
+      
+      //判子
       
       //朱肉に押す
       
@@ -129,8 +125,63 @@ void loop() {
       e = 5;
       Braccio.ServoMovement(3000, 113,s,e,120, syaringan_sasuke, grip);
       delay(delay_num);
-      */
+      
+      //ここまで
+      
+      e = 90;
+      Braccio.ServoMovement(3000, 110,s,e,133, syaringan_sasuke, grip);
+      delay(delay_num);
+      
+      //最後腕を振り上げる
+      Braccio.ServoMovement(3000, 13, s, 90, 133, 90, grip);
+      delay(delay_num);
+      
+    }
+    if (val == 4) {
+      //綾波レイ
+      
+      //最初腕を振り上げる
+      
+      Braccio.ServoMovement(3000, 13, 90, 90, 90, ayanami, grip);
+      delay(delay_num);
+      
+      //朱肉に押す
+      
+      s = 42;
+      e = 5;
+      Braccio.ServoMovement(3000, 13,s,e,133, ayanami, grip);
+      delay(delay_num);
+      e = 90;
+      Braccio.ServoMovement(3000, 13,s,e,133, ayanami, grip);
+      delay(delay_num);
+      
+      //判子を手に押す
+      
+      Braccio.ServoMovement(3000, 90,90,90,90, ayanami, grip);
+      delay(delay_num);
+      s = 42;
+      e = 6;
+      Braccio.ServoMovement(3000, 110,s,e,133, ayanami, grip);
+      delay(delay_num);
+      
+      //ここまで
+      
+      e = 90;
+      Braccio.ServoMovement(3000, 110,s,e,133, ayanami, grip);
+      delay(delay_num);
+      
+      //最後腕を振り上げる
+      Braccio.ServoMovement(3000, 13, s, 90, 133, 90, grip);
+      delay(delay_num);
+      
+    }
+    if (val == 5) {
       //ゴルゴ
+      
+      //最初腕を振り上げる
+      
+      Braccio.ServoMovement(3000, 13, 90, 90, 90, golgo, grip);
+      delay(delay_num);
       
       //朱肉に押す
       
@@ -161,15 +212,6 @@ void loop() {
       Braccio.ServoMovement(3000, 13, s, 90, 133, 90, grip);
       delay(delay_num);
       
-    }
-    if (val == 3) {
-      //写輪眼サスケ
-    }
-    if (val == 4) {
-      //綾波レイ
-    }
-    if (val == 5) {
-      //ゴルゴ
     }
   }
 }
