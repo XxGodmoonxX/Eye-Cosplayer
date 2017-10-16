@@ -62,6 +62,10 @@ void loop() {
       
       //眉上部分
       
+      s = ;
+      e = ;
+      Braccio.ServoMovement(3000, 
+      
       /*
       //上の辺
       
