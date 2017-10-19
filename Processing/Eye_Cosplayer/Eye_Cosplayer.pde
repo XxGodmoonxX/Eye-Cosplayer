@@ -21,28 +21,48 @@ void setup() {
   cp5 = new ControlP5(this);
   
   button = cp5.addButton("straight")
-    .setLabel("Straight")
-    .setPosition(250, 150)
+    .setLabel("s_Straight")
+    .setPosition(250, 50)
     .setSize(100, 50);
     
   button = cp5.addButton("syaringan_kakashi")
-    .setLabel("Syaringan_kakashi")
+    .setLabel("1_Syaringan_kakashi")
+    .setPosition(150, 150)
+    .setSize(100, 50);
+    
+  button = cp5.addButton("syaringan_kakashi_pen")
+    .setLabel("2_Syaringan_kakashi_pen")
     .setPosition(150, 250)
     .setSize(100, 50);
     
   button = cp5.addButton("syaringan_sasuke")
-    .setLabel("Syaringan_sasuke")
+    .setLabel("3_Syaringan_sasuke")
+    .setPosition(350, 150)
+    .setSize(100, 50);
+    
+  button = cp5.addButton("syaringan_sasuke_pen")
+    .setLabel("4_Syaringan_sasuke_pen")
     .setPosition(350, 250)
     .setSize(100, 50);
     
   button = cp5.addButton("ayanami")
-    .setLabel("Ayanami")
+    .setLabel("5_Ayanami")
     .setPosition(150, 350)
+    .setSize(100, 50);
+    
+  button = cp5.addButton("ayanami_pen")
+    .setLabel("6_Ayanami_pen")
+    .setPosition(150, 450)
     .setSize(100, 50);
   
   button = cp5.addButton("golgo")
-    .setLabel("Golgo")
+    .setLabel("7_Golgo")
     .setPosition(350, 350)
+    .setSize(100, 50);
+    
+  button = cp5.addButton("golgo_pen")
+    .setLabel("8_Golgo_pen")
+    .setPosition(350, 450)
     .setSize(100, 50);
 }
 
@@ -57,13 +77,25 @@ void keyPressed() {
     syaringan_kakashi();
   }
   if (key == '2') {
-    syaringan_sasuke();
+    syaringan_kakashi_pen();
   }
   if (key == '3') {
-    ayanami();
+    syaringan_sasuke();
   }
   if (key == '4') {
+    syaringan_sasuke_pen();
+  }
+  if (key == '5') {
+    ayanami();
+  }
+  if (key == '6') {
+    ayanami_pen();
+  }
+  if (key == '7') {
     golgo();
+  }
+  if (key == '8') {
+    golgo_pen();
   }
 }
 
@@ -76,15 +108,31 @@ void syaringan_kakashi() {
   myPort.write(2);
   println(myPort.read());
 }
-void syaringan_sasuke() {
+void syaringan_kakashi_pen() {
   myPort.write(3);
   println(myPort.read());
 }
-void ayanami() {
+void syaringan_sasuke() {
   myPort.write(4);
   println(myPort.read());
 }
-void golgo() {
+void syaringan_sasuke_pen() {
   myPort.write(5);
+  println(myPort.read());
+}
+void ayanami() {
+  myPort.write(6);
+  println(myPort.read());
+}
+void ayanami_pen() {
+  myPort.write(7);
+  println(myPort.read());
+}
+void golgo() {
+  myPort.write(8);
+  println(myPort.read());
+}
+void golgo_pen() {
+  myPort.write(9);
   println(myPort.read());
 }
