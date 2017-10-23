@@ -73,77 +73,164 @@ void loop() {
     }
     if (val == 3) {
       //写輪眼カカシ ペン
-
+      
+      //↓新しいバージョン
+      
       //ここから眼を描く
       //上の辺
       //最初
       Braccio.ServoMovement(3000, 90, 45, 90, 133, 90, grip);
       delay(delay_num);
-      s = 35;
-      e = 22;
-      Braccio.ServoMovement(3000, 114, s, e, 98, pen + 5, grip);
-      delay(delay_num);
-      s = 43;
-      e = 16;
-      Braccio.ServoMovement(3000, 104, s, e, 110, pen, grip);
-      delay(delay_num);
-      s = 46;
-      e = 13;
-      Braccio.ServoMovement(3000, 101, s, e, 130, pen, grip);
-      delay(delay_num);
-      s = 49;
-      e = 10;
-      Braccio.ServoMovement(3000, 102, s, e, 130, pen, grip);
-      delay(delay_num);
-      s = 55;
-      e = 6;
-      Braccio.ServoMovement(3000, 107, s, e, 130, pen, grip);
-      delay(delay_num);
-      s = 58;
-      e = 4;
-      Braccio.ServoMovement(3000, 110, s, e, 130, pen, grip);
-      delay(delay_num);
-      //反対側の点
-      s = 62;
-      e = 2;
-      Braccio.ServoMovement(3000, 116, s, e, 120, pen, grip);
-      delay(delay_num);
-      s = 60;
-      e = 20;
-      Braccio.ServoMovement(3000, 114, s, e, 85, pen, grip);
-      delay(delay_num);
-      //下の辺
-      s = 60;
-      e = 27;
-      Braccio.ServoMovement(3000, 116, s, e, 85, pen + 5, grip);
-      delay(delay_num);
-      s = 56;
-      e = 36;
-      Braccio.ServoMovement(3000, 116, s, e, 85, pen + 5, grip);
-      delay(delay_num);
-      s = 48;
+      //まず平行
+      s = 50;
       e = 45;
-      Braccio.ServoMovement(3000, 113, s, e, 90, pen + 5, grip);
+      Braccio.ServoMovement(3000, 112, s, e, 110, pen + 5, grip);
       delay(delay_num);
-      s = 43;
-      e = 49;
-      Braccio.ServoMovement(3000, 112, s, e, 90, pen + 5, grip);
+      //ここから描く
+      s = 40;
+      e = 25;
+      Braccio.ServoMovement(3000, 113, s, e, 118, pen + 5, grip);
       delay(delay_num);
-      s = 38;
-      e = 54;
-      Braccio.ServoMovement(3000, 107, s, e, 90, pen + 5, grip);
+      s = 47;
+      e = 30;
+      Braccio.ServoMovement(3000, 102, s, e, 113, pen + 5, grip);
       delay(delay_num);
-      s = 33;
-      e = 59;
-      Braccio.ServoMovement(3000, 104, s, e, 90, pen + 5, grip);
+      s = 51;
+      e = 32;
+      Braccio.ServoMovement(3000, 99, s, e, 113, pen + 5, grip);
       delay(delay_num);
+      s = 57;
+      e = 10;
+      Braccio.ServoMovement(3000, 102, s, e, 113, pen, grip);
+      delay(delay_num);
+//      s = 55;
+//      e = 6;
+//      Braccio.ServoMovement(3000, 107, s, e, 130, pen, grip);
+//      delay(delay_num);
+//      s = 58;
+//      e = 4;
+//      Braccio.ServoMovement(3000, 110, s, e, 130, pen, grip);
+//      delay(delay_num);
+//      //反対側の点
+//      s = 62;
+//      e = 2;
+//      Braccio.ServoMovement(3000, 116, s, e, 120, pen, grip);
+//      delay(delay_num);
+//      s = 60;
+//      e = 20;
+//      Braccio.ServoMovement(3000, 114, s, e, 85, pen, grip);
+//      delay(delay_num);
+//      //下の辺
+//      s = 60;
+//      e = 27;
+//      Braccio.ServoMovement(3000, 116, s, e, 85, pen + 5, grip);
+//      delay(delay_num);
+//      s = 56;
+//      e = 36;
+//      Braccio.ServoMovement(3000, 116, s, e, 85, pen + 5, grip);
+//      delay(delay_num);
+//      s = 48;
+//      e = 45;
+//      Braccio.ServoMovement(3000, 113, s, e, 90, pen + 5, grip);
+//      delay(delay_num);
+//      s = 43;
+//      e = 49;
+//      Braccio.ServoMovement(3000, 112, s, e, 90, pen + 5, grip);
+//      delay(delay_num);
+//      s = 38;
+//      e = 54;
+//      Braccio.ServoMovement(3000, 107, s, e, 90, pen + 5, grip);
+//      delay(delay_num);
+//      s = 33;
+//      e = 59;
+//      Braccio.ServoMovement(3000, 104, s, e, 90, pen + 5, grip);
+//      delay(delay_num);
       //ここまで
+      s = 60;
+      e = 70;
+      Braccio.ServoMovement(3000, 104, s, e, 120, pen + 5, grip);
+      delay(delay_num);
+      s = 70;
       e = 90;
-      Braccio.ServoMovement(3000, 104, s, e, 90, pen, grip);
+      Braccio.ServoMovement(3000, 104, s, e, 120, pen + 5, grip);
       delay(delay_num);
-      //最後腕を振り上げる
-      Braccio.ServoMovement(3000, 0, 90, 30, 90, pen, grip);
-      delay(delay_num);
+//      //最後腕を振り上げる
+//      Braccio.ServoMovement(3000, 0, 90, 30, 130, pen, grip);
+//      delay(delay_num);
+      
+      //↓いままでのバージョン
+      
+//      //ここから眼を描く
+//      //上の辺
+//      //最初
+//      Braccio.ServoMovement(3000, 90, 45, 90, 133, 90, grip);
+//      delay(delay_num);
+//      s = 35;
+//      e = 22;
+//      Braccio.ServoMovement(3000, 114, s, e, 98, pen + 5, grip);
+//      delay(delay_num);
+//      s = 43;
+//      e = 16;
+//      Braccio.ServoMovement(3000, 104, s, e, 110, pen, grip);
+//      delay(delay_num);
+//      s = 46;
+//      e = 13;
+//      Braccio.ServoMovement(3000, 101, s, e, 130, pen, grip);
+//      delay(delay_num);
+//      s = 49;
+//      e = 10;
+//      Braccio.ServoMovement(3000, 102, s, e, 130, pen, grip);
+//      delay(delay_num);
+//      s = 55;
+//      e = 6;
+//      Braccio.ServoMovement(3000, 107, s, e, 130, pen, grip);
+//      delay(delay_num);
+//      s = 58;
+//      e = 4;
+//      Braccio.ServoMovement(3000, 110, s, e, 130, pen, grip);
+//      delay(delay_num);
+//      //反対側の点
+//      s = 62;
+//      e = 2;
+//      Braccio.ServoMovement(3000, 116, s, e, 120, pen, grip);
+//      delay(delay_num);
+//      s = 60;
+//      e = 20;
+//      Braccio.ServoMovement(3000, 114, s, e, 85, pen, grip);
+//      delay(delay_num);
+//      //下の辺
+//      s = 60;
+//      e = 27;
+//      Braccio.ServoMovement(3000, 116, s, e, 85, pen + 5, grip);
+//      delay(delay_num);
+//      s = 56;
+//      e = 36;
+//      Braccio.ServoMovement(3000, 116, s, e, 85, pen + 5, grip);
+//      delay(delay_num);
+//      s = 48;
+//      e = 45;
+//      Braccio.ServoMovement(3000, 113, s, e, 90, pen + 5, grip);
+//      delay(delay_num);
+//      s = 43;
+//      e = 49;
+//      Braccio.ServoMovement(3000, 112, s, e, 90, pen + 5, grip);
+//      delay(delay_num);
+//      s = 38;
+//      e = 54;
+//      Braccio.ServoMovement(3000, 107, s, e, 90, pen + 5, grip);
+//      delay(delay_num);
+//      s = 33;
+//      e = 59;
+//      Braccio.ServoMovement(3000, 104, s, e, 90, pen + 5, grip);
+//      delay(delay_num);
+//      //ここまで
+//      s = 50;
+//      e = 90;
+//      Braccio.ServoMovement(3000, 104, s, e, 90, pen, grip);
+//      delay(delay_num);
+//      //最後腕を振り上げる
+//      Braccio.ServoMovement(3000, 0, 90, 30, 90, pen, grip);
+//      delay(delay_num);
     }
     if (val == 4) {
       //写輪眼サスケ 判子
@@ -248,6 +335,7 @@ void loop() {
       Braccio.ServoMovement(3000, 104, s, e, 90, pen + 5, grip);
       delay(delay_num);
       //ここまで
+      s = 50;
       e = 90;
       Braccio.ServoMovement(3000, 104, s, e, 90, pen, grip);
       delay(delay_num);
@@ -282,6 +370,10 @@ void loop() {
       e = 20;
       Braccio.ServoMovement(3000, 115, s, e, 100, ayanami, grip);
       delay(delay_num);
+      s = 35;
+      e = 25;
+      Braccio.ServoMovement(3000, 115, s, e, 105, ayanami, grip);
+      delay(delay_num);
       //ここまで
       s = 50;
       e = 90;
@@ -300,27 +392,28 @@ void loop() {
       delay(delay_num);
       s = 42;
       e = 16;
-      Braccio.ServoMovement(3000, 113, s, e, 125, pen, grip);
+      Braccio.ServoMovement(3000, 110, s, e, 125, pen, grip);
       delay(delay_num);
       s = 47;
       e = 12;
-      Braccio.ServoMovement(3000, 112, s, e, 125, pen, grip);
+      Braccio.ServoMovement(3000, 109, s, e, 125, pen, grip);
       delay(delay_num);
       s = 52;
       e = 7;
-      Braccio.ServoMovement(3000, 111, s, e, 125, pen, grip);
+      Braccio.ServoMovement(3000, 109, s, e, 125, pen, grip);
       delay(delay_num);
       s = 57;
       e = 4;
-      Braccio.ServoMovement(3000, 111, s, e, 125, pen, grip);
+      Braccio.ServoMovement(3000, 109, s, e, 125, pen, grip);
       delay(delay_num);
       s = 62;
       e = 1;
-      Braccio.ServoMovement(3000, 112, s, e, 125, pen, grip);
+      Braccio.ServoMovement(3000, 110, s, e, 125, pen, grip);
       delay(delay_num);
       //ここまで
+      s = 50;
       e = 90;
-      Braccio.ServoMovement(3000, 113, s, e, 125, pen, grip);
+      Braccio.ServoMovement(3000, 110, s, e, 125, pen, grip);
       delay(delay_num);
       //最後腕を振り上げる
       Braccio.ServoMovement(3000, 0, 90, 30, 90, pen, grip);
@@ -382,6 +475,7 @@ void loop() {
       Braccio.ServoMovement(3000, 126, s, e, 90, pen + 15, grip);
       delay(delay_num);
       //ここまで
+      s = 50;
       e = 90;
       Braccio.ServoMovement(3000, 102, s, e, 130, pen, grip);
       delay(delay_num);
