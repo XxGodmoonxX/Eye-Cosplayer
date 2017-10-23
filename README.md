@@ -4,7 +4,7 @@ Anime No me
 ## Title
 Eye-Cosplayer
 ## Team member
-Makoto Amano
+Makoto Amano<br>
 Motoki Watanabe
 ## What we did
 Draw manga style eye on right hand.
