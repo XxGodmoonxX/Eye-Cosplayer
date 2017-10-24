@@ -62,6 +62,18 @@ void loop() {
       e = 40;
       Braccio.ServoMovement(3000, 115, s, e, 90, syaringan_kakashi - 12, grip);
       delay(delay_num);
+      s = 35;
+      e = 36;
+      Braccio.ServoMovement(3000, 115, s, e, 95, syaringan_kakashi - 12, grip);
+      delay(delay_num);
+      s = 38;
+      e = 33;
+      Braccio.ServoMovement(3000, 115, s, e, 100, syaringan_kakashi - 12, grip);
+      delay(delay_num);
+      s = 40;
+      e = 30;
+      Braccio.ServoMovement(3000, 115, s, e, 103, syaringan_kakashi - 12, grip);
+      delay(delay_num);
       //ここまで判子
       s = 50;
       e = 90;
@@ -252,12 +264,20 @@ void loop() {
       //手の上で判子が平行
       s = 40;
       e = 40;
-      Braccio.ServoMovement(3000, 109, s, e, 98, syaringan_sasuke + 3, grip);
+      Braccio.ServoMovement(3000, 109, s, e, 95, syaringan_sasuke + 3, grip);
       delay(delay_num);
       //判子を手に押す
       s = 35;
       e = 40;
-      Braccio.ServoMovement(3000, 109, s, e, 98, syaringan_sasuke + 3, grip);
+      Braccio.ServoMovement(3000, 109, s, e, 95, syaringan_sasuke + 3, grip);
+      delay(delay_num);
+      s = 38;
+      e = 37;
+      Braccio.ServoMovement(3000, 109, s, e, 100, syaringan_sasuke + 3, grip);
+      delay(delay_num);
+      s = 40;
+      e = 33;
+      Braccio.ServoMovement(3000, 109, s, e, 103, syaringan_sasuke + 3, grip);
       delay(delay_num);
       //ここまで判子
       s = 50;
